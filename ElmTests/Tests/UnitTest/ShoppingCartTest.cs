@@ -44,7 +44,7 @@ namespace Tests.UnitTest
         }
 
         [TestMethod]
-        public void GetTotalAmount_AddItemExist()
+        public void AddExistingItem()
         {
             _shoppingCart.Items = AddItems(2, 3, 5);
             var currentItems = _shoppingCart.Items.Count;
@@ -54,13 +54,33 @@ namespace Tests.UnitTest
         }
 
         [TestMethod]
-        public void GetTotalAmount_AddItemNew()
+        public void AddNewItem()
         {
             _shoppingCart.Items = AddItems(2, 3, 5);
             var currentItems = _shoppingCart.Items.Count;
             _shoppingCart.AddItemToCart(AddOneItem(5));
 
             Assert.AreEqual(_shoppingCart.Items.Count, currentItems + 1);
+        }
+
+        [TestMethod]
+        public void DeleteExistingItem()
+        {
+            _shoppingCart.Items = AddItems(2, 3, 5);
+            var currentItems = _shoppingCart.Items.Count;
+            _shoppingCart.RemoveItemToCart(AddOneItem(1));
+
+            Assert.AreEqual(_shoppingCart.Items.Count, currentItems - 1);
+        }
+
+        [TestMethod]
+        public void DeleteNotExistingItem()
+        {
+            _shoppingCart.Items = AddItems(2, 3, 5);
+            var currentItems = _shoppingCart.Items.Count;
+            _shoppingCart.RemoveItemToCart(AddOneItem(5));
+
+            Assert.AreEqual(_shoppingCart.Items.Count, currentItems);
         }
 
         private void AddProducts()

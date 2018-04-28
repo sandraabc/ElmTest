@@ -20,16 +20,15 @@ namespace Entities
 
         public void AddItemToCart(Item item)
         {
-            var test = Items.Find(x => x.Product.ID == item.Product.ID);
-            if (test == null)
-            {
+            if (Items.Find(x => x.Product.ID == item.Product.ID) == null)
                 this.Items.Add(item);
-            }
         }
 
         public void RemoveItemToCart(Item item)
         {
-            this.Items.Remove(item);
+            var itemToDelete = Items.Find(x => x.Product.ID == item.Product.ID);
+            if (itemToDelete != null)
+                this.Items.Remove(itemToDelete);
         }
 
         public void EmptyCart()

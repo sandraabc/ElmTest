@@ -28,7 +28,7 @@ namespace Tests.UnitTest
         public void GetTotalAmount()
         {
             _shoppingCart.Items = AddItems(2, 3, 5); ;
-            var result = _shoppingCart.CalculateTotal();
+            var result = _shoppingCart.CalculateTotalShoppingCart();
 
             Assert.AreEqual(result, 40);
         }
@@ -37,7 +37,7 @@ namespace Tests.UnitTest
         public void GetTotalAmount_OtherQuantities()
         {
             _shoppingCart.Items = AddItems(1, 8, 5); ;
-            var result = _shoppingCart.CalculateTotal();
+            var result = _shoppingCart.CalculateTotalShoppingCart();
 
             Assert.AreEqual(result, 58);
         }
@@ -49,7 +49,7 @@ namespace Tests.UnitTest
                 ID = 1,
                 Name = "A",
                 Price = 20,
-                Promo = new Promotions { Id = 1, Name = "Buy 1 Get 1 Free" }
+                Promo = new Promotions { Id = 1, Name = "Buy 1 Get 1 Free", TypePromotion = 2, PricePromotion = 0 }
             };
 
             Product2 = new Product
@@ -57,7 +57,7 @@ namespace Tests.UnitTest
                 ID = 2,
                 Name = "B",
                 Price = 4,
-                Promo = new Promotions { Id = 2, Name = "3 for 10 Euro" }
+                Promo = new Promotions { Id = 2, Name = "3 for 10 Euro", TypePromotion = 3, PricePromotion = 10 }
             };
 
             Product3 = new Product
@@ -90,7 +90,7 @@ namespace Tests.UnitTest
                 Quantity = quantity3
             };
 
-            return (new List<Item> { item1, item2, item3 });
+            return new List<Item> { item1, item2, item3 };
         }
     }
 }

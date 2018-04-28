@@ -12,22 +12,18 @@ namespace Entities
             get
             {
                 decimal priceFinal = 0;
-                switch (Product.Promo?.Id)
+                if (Product.Promo != null)
                 {
-                    case 1:
-                        priceFinal = ((Quantity / 2) * Product.Price) + ((Quantity % 2) * Product.Price);
-                        break;
-                    case 2:
-                        priceFinal = ((Quantity / 3) * 10 ) + ((Quantity % 3) * Product.Price);
-                        break;
-                    default:
-                        priceFinal = Quantity * Product.Price;
-                        break;
+                    var price = Product.Promo?.PricePromotion == 0 ? Product.Price : Product.Promo.PricePromotion;
+                    priceFinal = ((Quantity / Product.Promo.TypePromotion) * price) +
+                                 ((Quantity % Product.Promo.TypePromotion) * Product.Price);
                 }
-
+                else
+                {
+                    priceFinal = Product.Price * Quantity;
+                }
                 return priceFinal;
             }
-            set { }
         }
     }
 }

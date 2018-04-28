@@ -6,6 +6,6 @@ namespace Entities.Interfaces
 {
     interface IShoppingCart
     {
-        decimal CalculateTotal();
+        decimal CalculateTotalShoppingCart();
     }
 }

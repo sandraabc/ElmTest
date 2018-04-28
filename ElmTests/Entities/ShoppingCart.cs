@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Entities.Interfaces;
 
 namespace Entities
@@ -19,7 +20,11 @@ namespace Entities
 
         public void AddItemToCart(Item item)
         {
-            this.Items.Add(item);
+            var test = Items.Find(x => x.Product.ID == item.Product.ID);
+            if (test == null)
+            {
+                this.Items.Add(item);
+            }
         }
 
         public void RemoveItemToCart(Item item)

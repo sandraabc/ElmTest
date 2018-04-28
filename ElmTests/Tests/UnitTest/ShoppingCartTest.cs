@@ -12,6 +12,7 @@ namespace Tests.UnitTest
         private Product Product1 { get; set; }
         private Product Product2 { get; set; }
         private Product Product3 { get; set; }
+        private Product Product { get; set; }
 
         private List<Product> Products { get; set; }
         private List<Item> Items { get; set; }
@@ -43,12 +44,23 @@ namespace Tests.UnitTest
         }
 
         [TestMethod]
-        public void GetTotalAmount_AddItem()
+        public void GetTotalAmount_AddItemExist()
         {
             _shoppingCart.Items = AddItems(2, 3, 5);
-            _shoppingCart.AddItemToCart(AddOneItem());
+            var currentItems = _shoppingCart.Items.Count;
+            _shoppingCart.AddItemToCart(AddOneItem(1));
 
-            //Assert.AreEqual(result, 58);
+            Assert.AreEqual(_shoppingCart.Items.Count, currentItems);
+        }
+
+        [TestMethod]
+        public void GetTotalAmount_AddItemNew()
+        {
+            _shoppingCart.Items = AddItems(2, 3, 5);
+            var currentItems = _shoppingCart.Items.Count;
+            _shoppingCart.AddItemToCart(AddOneItem(5));
+
+            Assert.AreEqual(_shoppingCart.Items.Count, currentItems + 1);
         }
 
         private void AddProducts()
@@ -102,11 +114,17 @@ namespace Tests.UnitTest
             return new List<Item> { item1, item2, item3 };
         }
 
-        private Item AddOneItem()
+        private Item AddOneItem(int productId)
         {
             var item = new Item
             {
-                Product = Product1,
+                Product = new Product
+                {
+                    ID = productId,
+                    Name = "A",
+                    Price = 20,
+                    Promo = new Promotions { Id = 1, Name = "Buy 1 Get 1 Free", TypePromotion = 2, PricePromotion = 0 }
+                },
                 Quantity = 2
             };
 

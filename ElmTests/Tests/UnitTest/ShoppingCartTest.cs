@@ -42,6 +42,15 @@ namespace Tests.UnitTest
             Assert.AreEqual(result, 58);
         }
 
+        [TestMethod]
+        public void GetTotalAmount_AddItem()
+        {
+            _shoppingCart.Items = AddItems(2, 3, 5);
+            _shoppingCart.AddItemToCart(AddOneItem());
+
+            //Assert.AreEqual(result, 58);
+        }
+
         private void AddProducts()
         {
             Product1 = new Product
@@ -91,6 +100,17 @@ namespace Tests.UnitTest
             };
 
             return new List<Item> { item1, item2, item3 };
+        }
+
+        private Item AddOneItem()
+        {
+            var item = new Item
+            {
+                Product = Product1,
+                Quantity = 2
+            };
+
+            return item;
         }
     }
 }

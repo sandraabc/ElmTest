@@ -16,5 +16,20 @@ namespace Entities
             }
             return sum;
         }
+
+        public void AddItemToCart(Item item)
+        {
+            this.Items.Add(item);
+        }
+
+        public void RemoveItemToCart(Item item)
+        {
+            this.Items.Remove(item);
+        }
+
+        public void EmptyCart()
+        {
+            this.Items.Clear();
+        }
     }
 }

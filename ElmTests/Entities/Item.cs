@@ -1,8 +1,9 @@
 ﻿using System;
+using Entities.Interfaces;
 
 namespace Entities
 {
-    public class Item
+    public class Item : IItem
     {
         public Product Product { get; set; } = new Product();
         public int Quantity { get; set; }
@@ -24,6 +25,16 @@ namespace Entities
                 }
                 return priceFinal;
             }
+        }
+
+        public void AddMoreQuantity()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeleteQuantitys()
+        {
+            throw new NotImplementedException();
         }
     }
 }

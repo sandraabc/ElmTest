@@ -1,0 +1,10 @@
+[core]
+	bare = true
+	repositoryformatversion = 0
+	filemode = false
+	symlinks = false
+	ignorecase = true
+[remote "Elm"]
+	url = https://github.com/sandraabc/ElmTest.git
+	fetch = +refs/heads/*:refs/remotes/Elm/*
+	pushurl = https://github.com/sandraabc/ElmTest.git

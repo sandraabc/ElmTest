@@ -1,0 +1,17 @@
+C:\Users\Sandra\Documents\Visual Studio 2017\ElmTests\ElmTests\Entities\bin\Debug\netstandard2.0\Entities.deps.json
+C:\Users\Sandra\Documents\Visual Studio 2017\ElmTests\ElmTests\Entities\bin\Debug\netstandard2.0\Entities.dll
+C:\Users\Sandra\Documents\Visual Studio 2017\ElmTests\ElmTests\Entities\bin\Debug\netstandard2.0\Entities.pdb
+C:\Users\Sandra\Documents\Visual Studio 2017\ElmTests\ElmTests\Entities\obj\Debug\netstandard2.0\Entities.csprojResolveAssemblyReference.cache
+C:\Users\Sandra\Documents\Visual Studio 2017\ElmTests\ElmTests\Entities\obj\Debug\netstandard2.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\Sandra\Documents\Visual Studio 2017\ElmTests\ElmTests\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfoInputs.cache
+C:\Users\Sandra\Documents\Visual Studio 2017\ElmTests\ElmTests\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfo.cs
+C:\Users\Sandra\Documents\Visual Studio 2017\ElmTests\ElmTests\Entities\obj\Debug\netstandard2.0\Entities.dll
+C:\Users\Sandra\Documents\Visual Studio 2017\ElmTests\ElmTests\Entities\obj\Debug\netstandard2.0\Entities.pdb
+C:\Users\Sandra\Documents\Visual Studio 2017\Projects\ElmTest\ElmTests\Entities\bin\Debug\netstandard2.0\Entities.deps.json
+C:\Users\Sandra\Documents\Visual Studio 2017\Projects\ElmTest\ElmTests\Entities\bin\Debug\netstandard2.0\Entities.dll
+C:\Users\Sandra\Documents\Visual Studio 2017\Projects\ElmTest\ElmTests\Entities\bin\Debug\netstandard2.0\Entities.pdb
+C:\Users\Sandra\Documents\Visual Studio 2017\Projects\ElmTest\ElmTests\Entities\obj\Debug\netstandard2.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\Sandra\Documents\Visual Studio 2017\Projects\ElmTest\ElmTests\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfoInputs.cache
+C:\Users\Sandra\Documents\Visual Studio 2017\Projects\ElmTest\ElmTests\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfo.cs
+C:\Users\Sandra\Documents\Visual Studio 2017\Projects\ElmTest\ElmTests\Entities\obj\Debug\netstandard2.0\Entities.dll
+C:\Users\Sandra\Documents\Visual Studio 2017\Projects\ElmTest\ElmTests\Entities\obj\Debug\netstandard2.0\Entities.pdb
